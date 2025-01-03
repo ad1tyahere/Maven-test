@@ -12,13 +12,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LoginAutomationTest {
 
-    private static WebDriver driver;
+    WebDriver driver;
 
-    @BeforeAll
-    static void setup() {
-        // Set up WebDriver using WebDriverManager (no need to specify path)
+    @BeforeEach
+    public void setup() {
+        // WebDriverManager will automatically download and configure the correct ChromeDriver version
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+        driver.get("https://example.com");
     }
 
     @Test
