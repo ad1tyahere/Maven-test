@@ -6,7 +6,7 @@ pipeline {
     environment {
         SONAR_TOKEN = credentials('sonar-token') // Securely retrieve SonarQube token
         SONAR_HOST_URL = 'http://localhost:9000' // Replace with your SonarQube server URL
-        SONAR_PROJECT_KEY = 'mavenaryan' // Replace with your project key
+        SONAR_PROJECT_KEY = 'java-maven' // Replace with your project key
     }
     stages {
         stage('Checkout') {
