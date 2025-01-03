@@ -19,14 +19,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the project...'
-                sh 'mvn -B -DskipTests clean package' // Skipping tests during build
+                bat 'mvn -B -DskipTests clean package' // Skipping tests during build
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh 'mvn test' // Running tests after build
+                bat 'mvn test' // Running tests after build
             }
             post {
                 always {
